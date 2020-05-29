@@ -1,14 +1,10 @@
 <template>
 <div id="app">
 <h3>{{title}}</h3>
-<div class="col-md-12">
-<Character  
-v-for="(id,index) in initial_ids" 
-:id="id" 
-dkey="index"
+<router-view></router-view>
+<router-link class="link" to="/data/people">Meet the Characters</router-link> |
+<router-link class="link" to="/data/planets">Explore the Planets</router-link>
 
- />
-</div>
 </div>
 
 </template>
@@ -19,13 +15,14 @@ export default {
     data() {
         return {
             title:"Generate Your Team",
-            initial_ids:[1,13,14]
+           initial_ids:[1,13,14]
         }
     },
-    components:{
-        Character
-      
-    }
-    
+    // components:{
+    //     Character
+
+    // }
+
 }
 </script>>
+//
